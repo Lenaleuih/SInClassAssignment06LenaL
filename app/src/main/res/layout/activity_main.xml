@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/animalName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:freezesText="true"
+            android:hint="Animal Name"
+            android:inputType="textCapSentences|textAutoCorrect" />
+
+        <EditText
+            android:id="@+id/numberOfLegs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:freezesText="true"
+            android:hint="Legs"
+            android:inputType="phone" />
+
+        <CheckBox
+            android:id="@+id/hasFur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Has Fur?" />
+
+        <TextView
+            android:id="@id/otherType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:freezesText="true"
+            android:text="What class does this animal belong to?"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/animalClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Mammal" />
+
+            <RadioButton
+                android:id="@+id/type2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Bird" />
+
+            <RadioButton
+                android:id="@+id/type3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Fish" />
+
+            <RadioButton
+                android:id="@+id/type4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Reptile" />
+
+            <RadioButton
+                android:id="@+id/otherType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Others" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/moreInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:freezesText="true"
+            android:hint="More Information"
+            android:inputType="textCapSentences|textAutoCorrect" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:onClick="submit"
+            android:text="submit"
+            android:textAllCaps="true" />
+    </LinearLayout>
+</ScrollView>
+
